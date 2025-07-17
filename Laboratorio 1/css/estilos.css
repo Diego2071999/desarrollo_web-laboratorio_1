@@ -1,0 +1,98 @@
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Contenedor general */
+.contenedor {
+  background-color: #e0f7fa;
+  margin: 30px auto;
+  padding: 30px;
+  border: 2px solid #0097a7;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+/* Estilo por ID */
+#principal {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+h1 {
+  background-color: #d3d3d3;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  border-radius: 5px;
+}
+
+/* Subtítulos */
+h2 {
+  color: #00796b;
+  margin-top: 20px;
+}
+
+/* Párrafos */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+/* Lista lateral */
+aside {
+  background-color: #fafafa;
+  border-left: 5px solid #00bcd4;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff4081;
+}
+
+/* Imágenes */
+img {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Figcaption */
+figcaption {
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 0.9rem;
+  background-color: #e0f2f1;
+  border-top: 1px solid #ccc;
+}
