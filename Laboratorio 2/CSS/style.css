@@ -1,0 +1,260 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8fff1ff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Permite que el body actúe como un contenedor flex */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% del alto de la ventana */
+}
+
+.wrapper {
+    flex: 1; /* Permite que el wrapper se expanda y ocupe el espacio disponible, empujando el footer hacia abajo */
+}
+
+/* Estilos del encabezado */
+.main-header {
+    background-color: #00999e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* Flexbox en el header */
+    display: flex; /* Convierte el header en un contenedor flex */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.header-title {
+    margin: 0; /* Elimina el margen por defecto del h1 */
+}
+
+/* Estilos de la navegación */
+.main-nav {
+    background-color: #00d2da;
+}
+
+.nav-list {
+    list-style: none;
+    /* Flexbox en la lista de navegación */
+    display: flex; /* Convierte la lista en un contenedor flex */
+    flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en múltiples líneas si no hay espacio */
+    justify-content: center; /* Centra los elementos de navegación horizontalmente */
+    padding: 0; /* Asegura que no haya padding extra en la lista */
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #106b67;
+}
+
+/* Estilos del contenedor principal (sidebar y contenido) */
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px; /* Añade padding horizontal para pantallas pequeñas */
+    /* Flexbox en el contenedor principal */
+    display: flex; /* Convierte el contenedor en un contenedor flex */
+    gap: 20px; /* Espacio entre los elementos flex */
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    flex: 1; /* Permite que la barra lateral crezca y se encoja. Toma 1 parte del espacio disponible. */
+    background-color: #e6f0ff;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px; /* Asegura un ancho mínimo para la barra lateral */
+}
+
+.sidebar-title {
+    margin-bottom: 10px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-list-item {
+    margin-bottom: 8px;
+}
+
+.sidebar-list-item a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.sidebar-list-item a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del contenido principal */
+.content {
+    flex: 3; /* Permite que el contenido principal crezca y se encoja. Toma 3 partes del espacio disponible. */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-article {
+    margin-bottom: 40px;
+    scroll-margin-top: 100px; /* Para que el scroll no se tape con el nav si es fijo */
+}
+
+.article-title {
+    margin-bottom: 15px;
+    color: #00999e;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center; /* Centra las imágenes en la galería */
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-image.small-image {
+    max-width: 400px; /* Limita el ancho de las imágenes más pequeñas */
+    height: auto;
+    display: block; /* Asegura que la imagen sea un bloque para centrarla con margin auto */
+    margin: 15px auto; /* Centra la imagen */
+}
+
+.principles-list,
+.structure-list,
+.character-design-list {
+    list-style: disc; /* Vuelve a usar viñetas para las listas dentro de los artículos */
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.principles-list li,
+.structure-list li,
+.character-design-list li {
+    margin-bottom: 8px;
+}
+
+
+/* Estilos del video */
+.video-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.video-title {
+    margin-bottom: 20px;
+    color: #00999e;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #000; /* Fondo negro para el reproductor */
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-link-text {
+    margin-top: 20px;
+}
+
+.external-video-link {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.external-video-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del pie de página */
+.main-footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior de la página */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .main-container {
+        /* En pantallas más pequeñas, los elementos del contenedor principal se apilan en columna */
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    }
+
+    .sidebar {
+        min-width: unset; /* Elimina el ancho mínimo para que se ajuste al 100% */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Apila los elementos de la navegación en columna */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    .nav-item {
+        margin: 5px 0; /* Ajusta los márgenes para los elementos apilados */
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Apila las imágenes en una columna en pantallas pequeñas */
+        align-items: center; /* Centra las imágenes apiladas */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header,
+    .main-nav,
+    .main-container,
+    .main-footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    .nav-link {
+        padding: 10px 5px;
+    }
+}
